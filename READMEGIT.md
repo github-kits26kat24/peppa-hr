@@ -5,7 +5,11 @@ echo "# hr-app-project" >> README.md
   git branch -M main
   git remote add origin https://github.com/github-kits26kat24/hr-app-project.git
   git push -u origin main
+  git push --force origin main
+
+git remote add origin https://github.com/github-kits26kat24/Peppa-Pig.git
 
   git remote add origin https://github.com/github-kits26kat24/hr-app-project.git
   git branch -M main
   git push -u origin main
+  git push --force origin main
