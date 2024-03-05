@@ -14,10 +14,9 @@ resource "aws_subnet" "node-2" {
 
   tags = {
     Name = "Node-2"
-    Info = "AZ: ${data.aws_availability_zones.working.names[0]} in Region: ${data.aws_region.current.description}"
+    Info = "AZ: ${data.aws_availability_zones.working.names[1]} in Region: ${data.aws_region.current.description}"
   }
 }
-
 resource "aws_subnet" "monitoring" {
   vpc_id     = aws_vpc.prod.id
   cidr_block = "10.0.3.0/24"

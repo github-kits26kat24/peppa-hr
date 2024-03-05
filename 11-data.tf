@@ -3,14 +3,7 @@ data "aws_caller_identity" "current" {}
 data "aws_availability_zones" "working" {}
 data "aws_vpcs" "vpcs" {}
 
-#### Creating Latest AMI #### 
-data "aws_ami" "latest_amazon_linux" {
-  owners = ["137112412989"]
-  filter {
-    name   = "name"
-    values = ["al2023-ami-2023.3.20240205.2-kernel-6.1-x86_64*"]
-  }
-}
+#["al2023-ami-2023.3.20240205.2-kernel-6.1-x86_64*"]
 
 output "all_vpc_ids" {
   value = data.aws_vpcs.vpcs.ids
@@ -43,7 +36,6 @@ output "aws_region_description" {
 output "aws_region_endpoint" {
   value = data.aws_region.current.endpoint
 }
-
 output "aws_availability_zones" {
   value = data.aws_availability_zones.working.names
 }
